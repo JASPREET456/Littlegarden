@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/all.js"></script>
+    <title>Checkout</title>
+    <link href="./css/bootstrap.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="bg-custom container-fluid m-0 p-0">
+      <nav class="navbar navbar-expand-lg navbar-light bg-custom">
+        <div class="container-fluid justify-content-evenly align-items-center">
+          <a
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="We are awesome"
+            class="navbar-brand d-flex align-items-center justify-content-around"
+            href="./login.html"
+          >
+            <img
+              style="max-width: 75px"
+              src="./assets/logo.jpeg"
+              alt="Little Garden Logo"
+              class="m-0"
+            />
+            <span class="h5 m-0 px-1 py-0 text-light">Little <br />Garden</span>
+          </a>
+          <!-- <span class="text-light display-6 fw-light col text-center"
+              >Make Friends With Garden</span
+            > -->
+          <button
+            class="navbar-toggler text-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end m-0"
+            id="navbarTogglerDemo01"
+          >
+            <ul class="navbar-nav mb-2 m-lg-0">
+              <li class="nav-item my-1">
+                <!-- <div class="d-flex justify-content-between align-items-center">
+                    <span class="profile-icon rounded-pill overflow-hidden">
+                      <img
+                        class="mw-100 profile-avatar"
+                        src="./assets/avatar.webp"
+                        alt=""
+                      />
+                    </span>
+                    <span class="text-light px-1">Full Name</span>
+                  </div> -->
+                <a
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Login or Check your profile"
+                  class="d-inline nav-link text-light"
+                  href="./login.html"
+                  >Profile</a
+                >
+              </li>
+              <li class="nav-item my-1">
+                <a
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  class="nav-link d-inline text-light px-3"
+                  title="Little Garden Homepage"
+                  aria-current="page"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item my-1">
+                <a
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Check out our blog"
+                  class="d-inline nav-link text-light"
+                  href="./read.html"
+                  >Read</a
+                >
+              </li>
+              <li class="nav-item my-1">
+                <a
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Get in touch with us"
+                  class="d-inline nav-link text-light"
+                  href="./contact.html"
+                  >Contact</a
+                >
+              </li>
+              <li class="nav-item my-1">
+                <a
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Who are we?"
+                  class="d-inline nav-link text-light"
+                  href="./about.html"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item my-1">
+                <a
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Buy gardening products"
+                  class="d-inline nav-link text-light"
+                  href="./store.html"
+                  >Store</a
+                >
+              </li>
+
+              <li class="nav-item my-1">
+                <a
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Check the number of items in your cart."
+                  href="./cart.html"
+                  class="d-inline nav-link text-light btn bg-primary px-3"
+                >
+                  Cart
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="container py-2">
+      <div class="d-flex justify-content-between align-items-start">
+        <div class="row" id="cart-row"></div>
+        <div class="col-4 px-5 bg-light">
+          <h1 class="py-2">Checkout</h1>
+          <h4 class="py-2" id="price-total">
+            Total: <span id="total-price"></span>
+          </h4>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Pay Using</option>
+            <option value="1">Card</option>
+            <option value="2">UPI</option>
+            <option value="3">Cash</option>
+          </select>
+          <button id="payment-btn" class="btn w-100 btn-primary my-3">
+            Place Order
+          </button>
+        </div>
+      </div>
+    </section>
+    <div
+      id="message-display"
+      class="text-light top-0 h-100 w-100 bg-dark position-absolute p-4 bg-light text-dark"
+      style="opacity: 0; pointer-events: none; transition: 0.3s ease-in"
+    >
+      <div class="container">
+        <div class="d-flex align-items-baseline justify-content-between">
+          <h1 class="p-2 text-light">Provide Feedback</h1>
+          <a
+            href="./index.html"
+            class="btn btn-primary text-light text-decoration-none"
+          >
+            Home
+          </a>
+        </div>
+        <div class="container py-5">
+          <div class="mb-3 w-50 m-auto">
+            <label for="customRange3" class="text-light form-label"
+              >Overall Experience</label
+            >
+            <input
+              type="range"
+              class="form-range"
+              min="0"
+              max="4"
+              step="1"
+              id="experience"
+            />
+          </div>
+          <div class="mb-3 w-50 m-auto">
+            <label for="Full Name" class="text-light form-label"
+              >Provide feedback</label
+            >
+            <textarea
+              type="text"
+              class="form-control mb-2"
+              id="message"
+              rows="5"
+              placeholder="This was my best experience ever."
+            ></textarea>
+            <button class="btn btn-primary" id="update-submit">
+              <a href="./index.html" class="text-light text-decoration-nonr"
+                >Submit</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/checkout.js"></script>
+  </body>
+</html>

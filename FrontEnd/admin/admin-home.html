@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../js/all.js"></script>
+    <title>Admin Home | Little Garden</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+  </head>
+  <body>
+    <header class="bg-custom">
+      <div class="container-fluid container-lg px-1 px-lg-0 py-3">
+        <div
+          class="row align-items-center justify-content-center justify-content-lg-end"
+        >
+          <div class="col-2">
+            <div class="icon-item d-flex align-items-center">
+              <a href="../index.html">
+                <img
+                  style="max-width: 75px"
+                  src="../assets/logo.jpeg"
+                  alt="Little Garden Logo"
+              /></a>
+              <h5 class="px-1 text-light">Little Garden</h5>
+            </div>
+          </div>
+          <div class="col-12 col-lg-10">
+            <ul
+              class="nav nav-pills justify-content-center justify-content-lg-end align-items-center"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link text-light active"
+                  aria-current="page"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="./admin-store.html"
+                  >Store</a
+                >
+              </li>
+            </ul>
+            <div class="login-item"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="container">
+      <h1 class="display-6 text-center text-dark py-3">Manage Users</h1>
+
+      <div class="row" id="user-card-row">
+        <!-- <div class="col-4">
+          <div
+            class="d-flex shadow-lg justify-content-between align-items-center p-2"
+          >
+            <div class="titles">
+              <h4>John Doe</h4>
+              <h6 class="fw-light">JohnDoe123@gmail.com</h6>
+            </div>
+            <div class="icon">
+              <button class="btn btn-primary rounded">Edit</button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <section
+      id="background"
+      class="edit-form w-100 h-100 position-absolute bg-dark top-0 start-0"
+      style="visibility: hidden"
+    >
+      <div
+        class="d-flex justify-content-between align-items-baseline container py-2"
+      >
+        <h2 class="text-light fw-light">Edit Details Of User</h2>
+        <button
+          class="btn-close btn-close-white"
+          id="background-close-btn"
+        ></button>
+      </div>
+      <div class="container py-5">
+        <div class="mb-3 w-25 m-auto">
+          <label for="Email" class="text-light form-label">Email</label>
+          <input
+            type="Email"
+            class="form-control"
+            id="new-user-email"
+            placeholder="Name@email.com"
+          />
+        </div>
+        <div class="mb-3 w-25 m-auto">
+          <label for="Full Name" class="text-light form-label">Full Name</label>
+          <input
+            type="Name"
+            class="form-control"
+            id="new-user-name"
+            placeholder="John Doe"
+          />
+        </div>
+        <div class="text-center">
+          <button class="btn btn-primary" id="update-submit">Submit</button>
+        </div>
+      </div>
+    </section>
+    <script src="../js/admin-home.js"></script>
+  </body>
+</html>

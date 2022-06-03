@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/all.js"></script>
+    <title>Cart | Little Garden</title>
+    <link href="./css/bootstrap.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="bg-custom container-fluid m-0 p-0">
+      <nav class="navbar navbar-expand-lg navbar-light bg-custom">
+        <div class="container-fluid justify-content-evenly align-items-center">
+          <a
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="We are awesome"
+            class="navbar-brand d-flex align-items-center justify-content-around"
+            href="./login.html"
+          >
+            <img
+              style="max-width: 75px"
+              src="./assets/logo.jpeg"
+              alt="Little Garden Logo"
+              class="m-0"
+            />
+            <span class="h5 m-0 px-1 py-0 text-light">Little <br />Garden</span>
+          </a>
+          <!-- <span class="text-light display-6 fw-light col text-center"
+              >Make Friends With Garden</span
+            > -->
+          <button
+            class="navbar-toggler text-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end m-0"
+            id="navbarTogglerDemo01"
+          >
+            <ul class="navbar-nav mb-2 m-lg-0">
+              <li class="nav-item my-1">
+                <!-- <div class="d-flex justify-content-between align-items-center">
+                    <span class="profile-icon rounded-pill overflow-hidden">
+                      <img
+                        class="mw-100 profile-avatar"
+                        src="./assets/avatar.webp"
+                        alt=""
+                      />
+                    </span>
+                    <span class="text-light px-1">Full Name</span>
+                  </div> -->
+                <a
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Login or Check your profile"
+                  class="d-inline nav-link text-light"
+                  href="./login.html"
+                  >Profile</a
+                >
+              </li>
+              <li class="nav-item my-1">
+                <a
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="right"
+                  class="nav-link d-inline text-light px-3"
+                  title="Little Garden Homepage"
+                  aria-current="page"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item my-1">
+                <a
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Check out our blog"
+                  class="d-inline nav-link text-light"
+                  href="./read.html"
+                  >Read</a
+                >
+              </li>
+              <li class="nav-item my-1">
+                <a
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Get in touch with us"
+                  class="d-inline nav-link text-light"
+                  href="./contact.html"
+                  >Contact</a
+                >
+              </li>
+              <li class="nav-item my-1">
+                <a
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Who are we?"
+                  class="d-inline nav-link text-light"
+                  href="./about.html"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item my-1">
+                <a
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Buy gardening products"
+                  class="d-inline nav-link text-light"
+                  href="./store.html"
+                  >Store</a
+                >
+              </li>
+
+              <li class="nav-item my-1">
+                <a
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Check the number of items in your cart."
+                  href="./cart.html"
+                  class="d-inline nav-link text-light btn bg-primary px-3"
+                >
+                  Cart
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="h-100 gradient-custom">
+      <div class="container py-5">
+        <div class="row d-flex justify-content-center my-4">
+          <div class="col-md-8">
+            <div class="card mb-4">
+              <div class="card-header py-3">
+                <h5 class="mb-0">Cart</h5>
+              </div>
+              <div id="cart-row">
+                <!-- <div class="card-body">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                      <div
+                        class="bg-image hover-overlay hover-zoom ripple rounded"
+                        data-mdb-ripple-color="light"
+                      >
+                        <img
+                          src="./assets/store/watering-can.webp"
+                          class="w-100"
+                        />
+                        <a href="#!">
+                          <div
+                            class="mask"
+                            style="background-color: rgba(251, 251, 251, 0.2)"
+                          ></div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                      <p><strong>Watering Can</strong></p>
+                      <p>Color: red</p>
+
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-sm me-1 mb-2"
+                        data-mdb-toggle="tooltip"
+                        title="Remove item"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          x="0px"
+                          y="0px"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          style="fill: #fff"
+                        >
+                          <path
+                            d="M 10 2 L 9 3 L 4 3 L 4 5 L 5 5 L 5 20 C 5 20.522222 5.1913289 21.05461 5.5683594 21.431641 C 5.9453899 21.808671 6.4777778 22 7 22 L 17 22 C 17.522222 22 18.05461 21.808671 18.431641 21.431641 C 18.808671 21.05461 19 20.522222 19 20 L 19 5 L 20 5 L 20 3 L 15 3 L 14 2 L 10 2 z M 7 5 L 17 5 L 17 20 L 7 20 L 7 5 z M 9 7 L 9 18 L 11 18 L 11 7 L 9 7 z M 13 7 L 13 18 L 15 18 L 15 7 L 13 7 z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                      <p class="text-start text-md-center">
+                        Quantity: 1 <br />
+                        <strong>$17.99</strong>
+                      </p>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+            <button class="btn btn-primary mb-4">
+              <a href="./store.html" class="text-decoration-none text-light"
+                >Continue Shopping</a
+              >
+            </button>
+            <div class="card mb-4">
+              <div class="card-body">
+                <p><strong>Expected shipping delivery</strong></p>
+                <p class="mb-0">12.10.2022 - 14.10.2022</p>
+              </div>
+            </div>
+            <div class="card mb-4 mb-lg-0">
+              <div class="card-body">
+                <p><strong>We accept</strong></p>
+                <img
+                  class="me-2"
+                  width="45px"
+                  src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
+                  alt="Visa"
+                />
+                <img
+                  class="me-2"
+                  width="45px"
+                  src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
+                  alt="American Express"
+                />
+                <img
+                  class="me-2"
+                  width="45px"
+                  src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
+                  alt="Mastercard"
+                />
+                <img
+                  class="me-2"
+                  width="45px"
+                  src="https://www.paypalobjects.com/webstatic/mktg/logo-center/PP_Acceptance_Marks_for_LogoCenter_76x48.png"
+                  alt="PayPal acceptance mark"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4">
+              <div class="card-header py-3">
+                <h5 class="mb-0">Summary</h5>
+              </div>
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0"
+                  >
+                    Products
+                    <span id="cart-total"></span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center px-0"
+                  >
+                    Shipping
+                    <span>$12</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3"
+                  >
+                    <div>
+                      <strong>Total amount</strong>
+                      <strong>
+                        <p class="mb-0">(including GST)</p>
+                      </strong>
+                    </div>
+                    <span><strong id="main-total"></strong></span>
+                  </li>
+                </ul>
+
+                <button type="button" class="btn btn-primary btn-lg btn-block">
+                  <a
+                    href="./checkout.html"
+                    class="text-light text-decoration-none"
+                  >
+                    Proceed To Payment
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./js/cart.js"></script>
+  </body>
+</html>
